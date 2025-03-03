@@ -16,10 +16,24 @@ texture = ExtResource("1_qnmr6")
 
 [node name="Paddle" parent="." instance=ExtResource("2_2leix")]
 position = Vector2(549, 576)
-speed = 180.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 
+[node name="Label" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 47.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 50
+text = "00000"
+
+[connection signal="area_entered" from="Paddle" to="." method="_on_paddle_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
