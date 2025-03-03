@@ -1,5 +1,8 @@
 extends Area2D
 
+signal on_gem_off_screen 
+
+@export var speed: float = 100.0 #cria uma aba speed no Inspector(menu da direita)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,8 +11,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.y += 100.0 * delta
+	position.y += speed * delta
 	
 	if position.y > get_viewport_rect().size.y:
+		on_gem_off_screen.emit() #emite um sinal ao sair da tela
 		set_process(false)
 		queue_free()
