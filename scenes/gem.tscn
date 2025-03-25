@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://csc4xxvptq4oe"]
 
-[ext_resource type="Script" path="res://scenes/gem.gd" id="1_4fq4s"]
+[ext_resource type="Script" uid="uid://ddlakmk3pbdfq" path="res://scenes/gem.gd" id="1_4fq4s"]
 [ext_resource type="Texture2D" uid="uid://b460xe2nteabe" path="res://assets/element_red_diamond.png" id="1_cm80n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pt0eq"]
